@@ -7,7 +7,7 @@
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from . models import Customer
+from . models import Customer, Pasenger
 from django.db import connections
 # from . serializers import TodoSerializer
 # from rest_framework.views import APIView
@@ -35,10 +35,12 @@ class DBooksListAPIView(APIView):
     def get(self,request):
         
         customerr = Customer.objects.all()
+        pasenger = Pasenger.objects.all()
+
         
       
         print("customerr-rrrrr-",customerr)
-        
+        print("pasenger-rrrrr-",pasenger)
 
         
 
